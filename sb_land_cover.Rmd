@@ -14,7 +14,7 @@ Author : Fletcher McConnell
 
 Repository: <https://github.com/fletcher-m/land-cover-classification>
 
-## About 
+## About
 
 In this repository, I create a land classification map of Southern Santa Barbara county, from data collected from landsat5 satellite and filtered through a decision tree.
 

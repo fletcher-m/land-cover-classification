@@ -1,22 +1,20 @@
-# land-cover-classification
+# Land Cover Classification in the Santa Barbara Region
 In this repository I create a land cover classification for southern Santa Barbara county.
 
 ## About
-This repository contains one r-markdown document 'la_redlining.RMD' and associated HTML file that analyze the relationship between redlining districts, HOLC grades and bird sightings in Los Angeles. It includes geospatial analysis to find patterns among these three aspects. 
+This repository contains one r-markdown document 'sb_land_cover.RMD' and associated HTML file that analyze data collected from collected from the landsat5 satellite and use this to create a land cover classification map for Santa Barbara.
 
 ## Visualization
-After filtering data from the United States Environmental Protection Agency's EJScreen to information about Los Angeles county, I make a plot of census block groups above the 95th percentile for wastewater discharge. I then use redlining data to make a plot of these boundaries, colored by HOLC grade. My last visual is a bar chart showing numbers of bird sightings among each HOLC grade. 
+After exploratory plotting of all bands collected from the landsat5 satellite, I then crop to region of Southern Santa Barbara. After using training data and reflectance data, a decision tree is created. This decision tree is then applied to the Southern Santa Barbara county region to develop a land cover classification map. 
 
 ## Highlights
  
-  - Data wrangling and exploration with `tidyverse`
-  - Geospatial data wrangling with `sf`
-  - Map making with `Tmap` and `GGPlot`
-  - Creating and customizing a bar chart
-  - Creating and customizing spatial plot
+  - Raster manipulation with `terra`
+  - Geospatial data wrangling with `sf` 
+  - Making a decision tree with `rpart`
+  - Visualizing land cover with `Tmap`
 
 ## Data
-The data for EJscree is available from: https://www.epa.gov/ejscreen/download-ejscreen-data.
-The data for redlining districts is available from: https://dsl.richmond.edu/panorama/redlining/static/downloads/geojson/CALosAngeles1939.geojson.
-The data for bird sightings is available from: gbif.org
-The access date for all: October 27, 2023.
+The data from landsat5 can be found here: https://www.usgs.gov/landsat-missions/landsat-5 
+The data for the souther Santa Barbara County region and training data for the decision tree can be found in the 'data' folder within this repository. All data accessed on November 28, 2023
+
